@@ -2,6 +2,21 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Lobster', cursive;
+    /*color: #F5DEB3;*/
+    /*color: black;*/
+
+}
+
+p {
+    font-size: 30px;
+    margin: 0 40px 0 40px;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    margin: 56px;
 }
 
 a {
@@ -15,7 +30,7 @@ a {
 }
 
 .full-all-wrapper {
-	display: flex;
+    display: flex;
     flex-direction: column;
     min-height: 100vh;
     justify-content: space-between;
@@ -26,7 +41,6 @@ a {
     display: flex;
     width: 100%;
     flex-direction: column;
-    background-color: #b4ff00;
 }
 
 .wrapper>* {
@@ -38,7 +52,7 @@ ul {
 }
 
 .page-header {
-    background-color: #e8a6a6;
+    margin-left: 10px;
 }
 
 .page-header nav {
@@ -50,29 +64,30 @@ ul {
 }
 
 .page-header nav ul {
-	    display: flex;
+    display: flex;
     width: 142px;
     justify-content: space-evenly;
 }
 
 .page-footer {
     display: flex;
-    background: #8dfb79;
+    /*background: #8dfb79;*/
     justify-content: center;
 }
 
 .page-footer ul {
     display: flex;
-    background: #38d1ff;
+    /*background: #38d1ff;*/
     flex: 1;
     justify-content: space-around;
     align-items: center;
 }
 
 .sidebar {
-    background-color: #d6d6d6;
+    /*background-color: #d6d6d6;*/
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
 }
 
 .sidebar ul {
@@ -80,38 +95,98 @@ ul {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-	background: #fcff55;
-	flex-grow: 1;
+    /*background: #fcff55;*/
+    flex-grow: 1;
 }
 
 
 a {
-	text-decoration: none;
-	color: black;
+    text-decoration: none;
 }
 
-#footer_logo {
-	width: 92px;
+#footer_logo_img {
+    width: 92px;
 }
 
 #sidebar_logo {
     display: flex;
 }
 
-.page-header button {
-    display: contents;
-}
 
 #ru {
     background-image: url(./img/ru.png);
-    color: rgba(0,0,0,0);
-    height: 24px;
-    width: 45px;
+    color: rgba(0, 0, 0, 0);
+    border: 0;
+    height: 23px;
+    width: 44px;
 }
+
 #en {
     background-image: url(./img/en.png);
-    color: rgba(0,0,0,0);
-    
-    height: 24px;
-    width: 45px;
+    color: rgba(0, 0, 0, 0);
+    border: 0;
+    height: 23px;
+    width: 44px;
 }
+
+#main_img {
+    display: block;
+    margin: auto;
+    margin-bottom: 56px;
+}
+
+.sidebar a {
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+}
+
+body {
+    background: url(./images/christmas-white.png);
+}
+
+.text {
+    margin-bottom: 100px;
+}
+
+#sidebar_logo {
+    margin: 0 auto;
+}
+
+#sidebar_logo_img {
+    width: 120px;
+    margin: 12px 30px;
+}
+
+.colored {
+    background: rgba(255, 255, 255, 0.8);
+    background-image: url(./images/snow_pattern.png);
+    background-size: 162px;
+    box-shadow: inset 0 0 30px rgba(0,0,0,0.5);
+    border-radius: 36px;
+}
+
+a {
+    color: black;
+}
+
+.color {
+    border-radius: 25px;
+    height: 50px;
+    border: none;
+    width: 50px;
+    font-size: 18px;
+
+}
+
+#black {
+    border: 1px solid white;
+    background: black;
+    color: white;
+}
+
+#white {
+    border: 1px solid black;
+    background: white;
+    color: black;
+}
+

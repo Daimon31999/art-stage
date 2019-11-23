@@ -12,14 +12,17 @@
     <meta charset="UTF-8">
     <title><?=$lang->get("TITLE_MAIN")?></title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styleshet02.css" />
+    <script type="text/javascript" src="jscript.js"></script>
+    <script type="text/javascript" src="./scripts/switch_color.js"></script>
 </head>
 
 <body>
     <div class="full-all-wrapper">
         <div class="all-wrapper">
-            <nav class="sidebar">
+            <nav class="sidebar colored">
                 <a id="sidebar_logo" href="./index.php">
-                    <img src="./img/logo.png" alt="">
                 </a>
                 <ul>
                     <li>
@@ -38,7 +41,7 @@
                 </ul>
             </nav>
             <div class="wrapper">
-                <header class="page-header">
+                <header class="page-header colored">
                     <nav>
 
                         <form action="language.php" method="POST">
@@ -52,26 +55,55 @@
                         </ul>
                         </form>
                         <img src="./img/search.png" alt="">
+                        <ul>
+                            <li>
+                                <button class="color" id="white" onclick="switch_color('white')">white</button>
+                            </li>
+                            <li>
+                                <button class="color" id="black" onclick="switch_color('black')">black</button>
+                            </li>
+                        </ul>
                     </nav>
                 </header>
                 <main class="page-main">
-                    <div>
-                        <h1><?=$article["title"]?></h1>
-                        <p>
-                            <?=$article["text"]?>
-                        </p>
-                    </div>
+                        <h1 id="mytitle"><?=$article["title"]?></h1>
+                        
+                            <?php
+                            switch ($id) {
+                                case 'main':
+                                    echo $main_slider;
+                                    echo '<div class="text">'.$article["text"].'</div>';
+                                    break;
+                                case 'news':
+
+                                    break;
+                                
+                            }
+                        ?>
+                        
                 </main>
             </div>
         </div>
-        <footer class="page-footer">
+        <footer class="page-footer colored">
             <ul>
                 <li><a href="#"><img src="./img/google_maps.png" alt="maps"></a></li>
-                <li><a href="./index.php"><img src="./img/logo.png" id="footer_logo" alt="logo"></a></li>
+                <li><a href="./index.php" id="footer_logo"></a></li>
                 <li>Копирайт</li>
             </ul>
         </footer>
     </div>
+    <script>
+            if(getCookie('color') == 'white'){
+                document.getElementById('sidebar_logo').innerHTML = '<img id="sidebar_logo_img" src="./img/logo.png"  alt="">';
+                document.getElementById('footer_logo').innerHTML = '<img id="footer_logo_img" src="./img/logo.png"  alt="">';
+                switch_color('white');
+            }
+            else if(getCookie('color') == 'black'){
+                document.getElementById('sidebar_logo').innerHTML = '<img id="sidebar_logo_img" src="./img/logo_light.png"  alt="">';
+                document.getElementById('footer_logo').innerHTML = '<img id="footer_logo_img" src="./img/logo_light.png"  alt="">';
+                switch_color('black');
+            }
+    </script>
 </body>
 
 </html>
