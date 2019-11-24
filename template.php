@@ -14,8 +14,10 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styleshet02.css" />
-    <script type="text/javascript" src="jscript.js"></script>
-    <script type="text/javascript" src="./scripts/switch_color.js"></script>
+    <script type="text/javascript" src="scripts/jscript.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=c9df9525-e54e-436f-b283-015a4cc132cc&lang=ru_RU"
+  type="text/javascript"></script>
+  <script src="scripts/map.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -54,7 +56,12 @@
                             </li>
                         </ul>
                         </form>
-                        <img src="./img/search.png" alt="">
+                        <div class="search_wrapper">
+                            <form action="search.php">
+                                <input type="text">
+                                <input type="submit">
+                            </form>
+                        </div>
                         <ul>
                             <li>
                                 <button class="color" id="white" onclick="switch_color('white')">white</button>
@@ -77,7 +84,6 @@
                                 case 'news':
 
                                     break;
-                                
                             }
                         ?>
                         
@@ -86,24 +92,18 @@
         </div>
         <footer class="page-footer colored">
             <ul>
-                <li><a href="#"><img src="./img/google_maps.png" alt="maps"></a></li>
-                <li><a href="./index.php" id="footer_logo"></a></li>
-                <li>Копирайт</li>
+                <li><div id="map"></div></li>
+                <li id="footer_copyright">
+                    <a href="./index.php" id="footer_logo"></a>
+                    Copyright
+                </li>
+                <li id="phone">
+                    Телефон: (+373)68007942 <br>
+                    Email: artstage@gmail.com
+                </li>
             </ul>
         </footer>
     </div>
-    <script>
-            if(getCookie('color') == 'white'){
-                document.getElementById('sidebar_logo').innerHTML = '<img id="sidebar_logo_img" src="./img/logo.png"  alt="">';
-                document.getElementById('footer_logo').innerHTML = '<img id="footer_logo_img" src="./img/logo.png"  alt="">';
-                switch_color('white');
-            }
-            else if(getCookie('color') == 'black'){
-                document.getElementById('sidebar_logo').innerHTML = '<img id="sidebar_logo_img" src="./img/logo_light.png"  alt="">';
-                document.getElementById('footer_logo').innerHTML = '<img id="footer_logo_img" src="./img/logo_light.png"  alt="">';
-                switch_color('black');
-            }
-    </script>
 </body>
 
 </html>

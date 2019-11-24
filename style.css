@@ -105,7 +105,8 @@ a {
 }
 
 #footer_logo_img {
-    width: 92px;
+    width: 120px;
+    margin-bottom: 14px;
 }
 
 #sidebar_logo {
@@ -141,7 +142,7 @@ a {
 }
 
 body {
-    background: url(./images/christmas-white.png);
+    background: url(./img/christmas-white.png);
 }
 
 .text {
@@ -159,7 +160,7 @@ body {
 
 .colored {
     background: rgba(255, 255, 255, 0.8);
-    background-image: url(./images/snow_pattern.png);
+    background-image: url(./img/snow_pattern.png);
     background-size: 162px;
     box-shadow: inset 0 0 30px rgba(0,0,0,0.5);
     border-radius: 36px;
@@ -190,3 +191,28 @@ a {
     color: black;
 }
 
+.page-footer ul li {
+    margin: 10px;
+}
+
+#map {
+    width: 350px;
+    height: 150px;   
+}
+
+.ymaps-2-1-75-map, .ymaps-2-1-75-i-ua_js_yes, .ymaps-2-1-75-map-bg, .ymaps-2-1-75-islets_map-lang-ru
+{
+    border-radius: 20px;
+}
+
+.ymaps-2-1-75-inner-panes {
+    border-radius: 20px;
+    border: 1px solid #00ADFF;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+#footer_copyright{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -10,7 +10,7 @@
 
 #container {
     display: flex;
-    width: 1000px;
+    width: 980px;
 }
 
 .sliderbutton {
@@ -21,7 +21,7 @@
 }
 
 #slideleft {
-    background: url(images/icons.png) -50px -202px no-repeat;
+    background: url(img/icons.png) -50px -202px no-repeat;
 }
 
 #slideleft:hover {
@@ -29,7 +29,7 @@
 }
 
 #slideright {
-    background: url(images/icons.png) 0 154px no-repeat;
+    background: url(img/icons.png) 0 154px no-repeat;
 }
 
 #slideright:hover {
@@ -85,3 +85,4 @@ li.current {
     width: 800px;
     height: 350px;
 }
+
