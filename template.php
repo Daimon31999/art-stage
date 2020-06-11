@@ -13,6 +13,7 @@
     <link rel="shortcut icon" href="/img/favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="slider.css" />
     <script type="text/javascript" src="scripts/jscript.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=c9df9525-e54e-436f-b283-015a4cc132cc&lang=ru_RU"
@@ -63,7 +64,7 @@
                         </div>
                         <ul id="ul_opinion">
                             <li id="li_opinion">
-                              <a href="./myform.php">Нам важно ваше мнение</a>
+                              <a href="./myform.php"><?=$lang->get("REGISTRATION")?></a>
                             </li>
                             <li>
                                 <button class="color" id="white" onclick="switch_color('white')">white</button>
@@ -111,15 +112,15 @@
                                       break;
                                     case 'drawing':
                                       echo $drawing_slider;
-                                      echo $article["body"];
+                                      echo '<div class="text">'.$article["body"].'</div>';
                                     break;
                                     case 'music':
                                       echo $music_slider;
-                                      echo $article["body"];
+                                      echo '<div class="text">'.$article["body"].'</div>';
                                     break;
                                     case 'modeling':
                                       echo $modeling_slider;
-                                      echo $article["body"];
+                                      echo '<div class="text">'.$article["body"].'</div>';
                                     break;
 
 

@@ -22,7 +22,8 @@
     {
         global $lang;
         global $article;
-        error_reporting(E_ALL);
+        //error_reporting(E_ALL);
+        //error_reporting(E_ERROR | E_PARSE);
         ini_set("display_errors", 1);
         ini_set("display_startap_errors", 1);
         if(!isset($_COOKIE['language']))
@@ -34,7 +35,9 @@
         $mysqli=new mysqli("localhost", "root", "", "creative_center");
         $mysqli->set_charset("utf8");
         $result_set=$mysqli->query("SELECT * FROM `articles_$tmp1` WHERE `id` = '$tmp'");
-        $article=$result_set->fetch_assoc();
+        //echo "query ---> "."SELECT * FROM `articles_$tmp1` WHERE `id` = '$tmp'";
+        
+         $article=$result_set->fetch_assoc();
         $mysqli->close();
     }
 ?>

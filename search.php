@@ -19,7 +19,6 @@
           return;
         }
         $result_set=$mysqli->query("SELECT * FROM `articles_$language` WHERE MATCH(title, body) AGAINST ('$search') OR title LIKE '%$search%' OR body LIKE '%$search%'");
-
         // Если нет ошибок SQL
         if($result_set)
         {
@@ -61,7 +60,7 @@
     }
 
     $search = $_POST['search'];
-
+    
     $b_result = search($search);
     if($b_result===1){
       for ($i=0; $i < count($article); $i++) {
